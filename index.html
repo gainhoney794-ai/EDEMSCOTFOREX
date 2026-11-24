@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eaf6ff">
+  <meta name="description" content="Connect with EDEMSCOT FOREX for forex education, market insights and community updates.">
+  <title>EDEMSCOT FOREX | Learn. Connect. Trade Smarter.</title>
+  <style>
+    :root{--blue:#168bd2;--blue-dark:#075b98;--ink:#102b43;--muted:#587187;--pale:#eaf6ff;--line:#d9eaf5;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(180deg,#f5fbff 0%,#fff 60%);line-height:1.6}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:.04em}
+    .mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,#1598e5,#075b98);display:grid;place-items:center;color:white;font-size:17px;box-shadow:0 8px 22px #168bd233}
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.18em;font-weight:700}
+    nav{display:flex;gap:24px;align-items:center;font-size:14px;color:var(--muted)}nav a{text-decoration:none}nav a:hover{color:var(--blue-dark)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:750;font-size:14px;transition:.2s;border:1px solid transparent}
+    .btn-primary{background:var(--blue);color:white;box-shadow:0 10px 24px #168bd233}.btn-primary:hover{background:var(--blue-dark);transform:translateY(-2px)}
+    .btn-outline{border-color:#b9d9ee;background:white;color:var(--blue-dark)}.btn-outline:hover{background:var(--pale)}
+    .hero{padding:78px 0 74px;display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;background:#fff;color:var(--blue-dark);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .dot{width:8px;height:8px;background:#28b67a;border-radius:50%;box-shadow:0 0 0 4px #28b67a20}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.04;letter-spacing:-.055em;margin:22px 0 18px}h1 span{color:var(--blue)}
+    .lead{font-size:18px;color:var(--muted);max-width:590px;margin:0 0 28px}.actions{display:flex;flex-wrap:wrap;gap:12px}
+    .visual{min-height:360px;border-radius:30px;background:radial-gradient(circle at 80% 15%,#bfe7ff 0,transparent 32%),linear-gradient(145deg,#e6f5ff,#f8fcff 65%);border:1px solid #d5ebf9;position:relative;overflow:hidden;padding:28px;display:flex;align-items:center;justify-content:center}
+    .visual:before,.visual:after{content:"";position:absolute;border:1px solid #a9d8f2;border-radius:50%;width:300px;height:300px;opacity:.55}.visual:after{width:410px;height:410px}
+    .chart{position:relative;z-index:1;width:100%;max-width:390px;background:#ffffffd9;backdrop-filter:blur(10px);border:1px solid white;border-radius:22px;padding:24px;box-shadow:0 22px 55px #0d5e8d18}
+    .chart-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;font-weight:700}.chart strong{font-size:26px;display:block;margin:14px 0 2px}.chart small{color:#1a9c6b;font-weight:700}
+    .bars{height:125px;display:flex;align-items:end;gap:8px;margin-top:18px;border-bottom:1px solid var(--line);padding:0 5px}
+    .bars i{display:block;flex:1;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#49b8f1,#168bd2);opacity:.88}
+    section{padding:54px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 30px}.section-head h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.035em;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 30px #0d5e8d08}
+    .icon{width:46px;height:46px;border-radius:14px;background:var(--pale);display:grid;place-items:center;color:var(--blue-dark);font-size:22px;margin-bottom:16px}.card h3{margin:0 0 7px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .social{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.social a{display:flex;align-items:center;gap:14px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:16px;text-decoration:none;transition:.2s}.social a:hover{transform:translateY(-3px);border-color:#8cc9ec;box-shadow:0 12px 28px #0d5e8d12}.social b{display:block}.social small{color:var(--muted)}
+    .social-icon{width:44px;height:44px;flex:none;border-radius:13px;display:grid;place-items:center;background:var(--pale);color:var(--blue-dark);font-weight:900;font-size:18px}
+    .notice{margin-top:24px;padding:15px 18px;border-radius:14px;background:#f4faff;border:1px solid var(--line);font-size:12px;color:var(--muted)}
+    .cta{margin:36px 0 70px;padding:42px;border-radius:26px;background:linear-gradient(120deg,#0b6eae,#168bd2);color:white;display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{font-size:clamp(25px,4vw,36px);line-height:1.15;margin:0 0 8px}.cta p{margin:0;color:#e3f4ff}.cta .btn{background:white;color:#075b98;white-space:nowrap}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;padding:48px 0 35px;gap:30px}.visual{min-height:300px}.cards,.social{grid-template-columns:1fr}.cta{padding:30px;display:block}.cta .btn{margin-top:20px}.wrap{width:min(100% - 30px,1120px)}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#" aria-label="EDEMSCOT FOREX home"><span class="mark">EF</span><span>EDEMSCOT FOREX<small>LEARN • CONNECT • GROW</small></span></a>
+      <nav aria-label="Main navigation"><a href="#about">About</a><a href="#connect">Connect with us</a><a href="#disclaimer">Risk notice</a></nav>
+      <a class="btn btn-outline" href="https://chat.whatsapp.com/JpN50GuugvwBiC6uYv2iuu?s=cl&p=a&iam=2" target="_blank" rel="noopener noreferrer">Join community ↗</a>
+    </header>
+    <main>
+      <section class="hero" id="about">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Your forex learning community</div>
+          <h1>Understand the market.<br><span>Build your edge.</span></h1>
+          <p class="lead">Welcome to EDEMSCOT FOREX. Connect with our community, follow our educational content and keep learning about the foreign exchange market—one step at a time.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://chat.whatsapp.com/JpN50GuugvwBiC6uYv2iuu?s=cl&p=a&iam=2" target="_blank" rel="noopener noreferrer">Join our WhatsApp group ↗</a>
+            <a class="btn btn-outline" href="https://www.youtube.com/@michealjosephokon-mj3910" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+          </div>
+        </div>
+        <div class="visual" aria-label="Illustration of a market chart">
+          <div class="chart"><div class="chart-top"><span>MARKET LEARNING</span><span>EDUCATION FIRST</span></div><strong>Learn with a plan</strong><small>Knowledge • Practice • Risk awareness</small><div class="bars"><i style="height:28%"></i><i style="height:42%"></i><i style="height:36%"></i><i style="height:56%"></i><i style="height:49%"></i><i style="height:72%"></i><i style="height:64%"></i><i style="height:88%"></i><i style="height:78%"></i><i style="height:96%"></i></div></div>
+        </div>
+      </section>
+      <section>
+        <div class="section-head"><h2>A smarter way to stay connected</h2><p>Use our official social channels to find updates, learning resources and community conversations.</p></div>
+        <div class="cards">
+          <article class="card"><div class="icon">⌁</div><h3>Learn continuously</h3><p>Build your understanding of forex concepts, market terminology and the discipline involved in trading.</p></article>
+          <article class="card"><div class="icon">◎</div><h3>Stay connected</h3><p>Join the community to follow announcements and take part in conversations with other learners.</p></article>
+          <article class="card"><div class="icon">↗</div><h3>Follow our content</h3><p>Visit our social platforms for videos, updates and educational material from EDEMSCOT FOREX.</p></article>
+        </div>
+      </section>
+      <section id="connect">
+        <div class="section-head"><h2>Connect with EDEMSCOT FOREX</h2><p>Choose a channel below to visit our social platforms.</p></div>
+        <div class="social">
+          <a href="https://chat.whatsapp.com/JpN50GuugvwBiC6uYv2iuu?s=cl&p=a&iam=2" target="_blank" rel="noopener noreferrer"><span class="social-icon">W</span><span><b>WhatsApp Community</b><small>Join the group</small></span></a>
+          <a href="https://www.facebook.com/share/1REh7iiS5o/" target="_blank" rel="noopener noreferrer"><span class="social-icon">f</span><span><b>Facebook</b><small>Visit our Facebook page</small></span></a>
+          <a href="https://www.youtube.com/@michealjosephokon-mj3910" target="_blank" rel="noopener noreferrer"><span class="social-icon">▶</span><span><b>YouTube</b><small>Watch our videos</small></span></a>
+        </div>
+        <p class="notice" id="disclaimer"><b>Risk notice:</b> Forex and leveraged trading involve substantial risk and may not be suitable for everyone. You can lose some or all of your invested capital. This page is for community and educational connection only; it does not promise profits or provide a guarantee of trading results. Do your own research and seek independent financial advice where appropriate.</p>
+      </section>
+      <section class="cta">
+        <div><h2>Start by joining the conversation.</h2><p>Connect with the EDEMSCOT FOREX community on WhatsApp.</p></div>
+        <a class="btn" href="https://chat.whatsapp.com/JpN50GuugvwBiC6uYv2iuu?s=cl&p=a&iam=2" target="_blank" rel="noopener noreferrer">Join WhatsApp ↗</a>
+      </section>
+    </main>
+    <footer><div class="foot"><span>© <span id="year"></span> EDEMSCOT FOREX. All rights reserved.</span><span>Learn responsibly. Trade with risk awareness.</span></div></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
